@@ -1,5 +1,5 @@
 import emailjs from 'emailjs-com';
-import { useState, useEffect, useRef } from 'react';
+import {  useEffect } from 'react';
 import Navbar from './components/navbar';
 import Skills from './components/skills';
 import Projects from './components/Projects';

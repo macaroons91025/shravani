@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import {
   FaCode,
-  FaDatabase,
-  FaServer,
-  FaRobot,
+  
+  
+ 
   FaCloud,
   FaBrain,
-  FaChalkboardTeacher,
-  FaUsers,
+ 
+
 } from "react-icons/fa";
 import {
   SiReact,
