@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="fixed w-full top-0 left-0 right-0 z-50  bg-opacity-90 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Your logo/brand */}
-        <a href="#name" className="text-xl font-bold text-rose-900">Sanskruti</a>
+        <a href="#name" className="text-xl font-bold text-rose-900">Shravani</a>
         
         {/* Navigation links */}
         <div className="hidden md:flex space-x-8">
