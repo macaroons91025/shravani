@@ -12,7 +12,7 @@ const Navbar = () => {
           <a href="#education" className="text-rose-700 hover:text-rose-900 transition">Education</a>
           <a href="#experience" className="text-rose-700 hover:text-rose-900 transition">Experience</a>
           <a href="#skills" className="text-rose-700 hover:text-rose-900 transition">Skills</a>
-          <a href="#projects" className="text-rose-700 hover:text-rose-900 transition">Projects</a>
+          <a href="#projects" className="text-rose-700 hover:text-rose-900 transition">Research Papers</a>
           <a href="#contact" className="text-rose-700 hover:text-rose-900 transition">Contact</a>
         </div>
       </div>

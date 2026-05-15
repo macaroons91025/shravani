@@ -4,100 +4,59 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Gear-up: AI Gadget Recommendation",
-      image: "/gearup.png",
-      tech: ["Next.js", "TailwindCSS", "Typescript", "Gemini AI"],
-      description: [
-        "Shows electronics products like monitors and accessories",
-        "Has an AI chatbot that recommends tech products when asked",
-        "Lets users make accounts or log in to the store",
-        "Displays products with sliding animations and special highlights"
-      ]
+      title: "POOKIE AS REGISTER, A SOCIOLINGUISTIC CASE STUDY OF GEN Z SLANG ON INSTAGRAM.",
+      description: "Analyzed the sociological and linguistic impact of digital slang on contemporary communication."
     },
     {
       id: 2,
-      title: "Hintellect: AI Code review",
-      image: "/hintellect.png",
-      tech: ["Bootstrap", "Node.js", "Express.js", "Python", "Gemini AI"],
-      description: [
-        "AI-powered tool for code review",
-        "Analyzes code for bugs and tips",
-        "Provides a smart score for efficiency",
-        "Uses a proxy to call the AI"
-      ]
+      title: "SOCIAL MEDIA VALIDATION THE IMPACT OF GRATITUDE IN SOCIAL MEDIA NARRATIVES AND WRITER MOTIVATION.",
+      description: "Investigated psychological factors influencing content creation and narrative structure."
     },
     {
       id: 3,
-      title: "Blog Management API",
-      image: "/blog.png",
-      tech: ["Node.js", "Express.js", "MongoDB", "JWT"],
-      description: [
-        "A RESTful blog management API",
-        "Provides full CRUD for blogs/comments",
-        "Features secure role-based access control",
-        "Easy installation, setup, and testing"
-      ]
-    },
-    {
-      id: 4,
-      title: "Product Management",
-      image: "product.jpeg",
-      tech: ["Bootstrap", "Node.js", "EJS", "MySQL"],
-      description: [
-        "RESTful API for database management",
-        "Handles CRUD for employee and equipment",
-        "Backend powered by Node.js and MySQL",
-        "Frontend uses Bootstrap for responsiveness"
-      ]
+      title: "FOR COLORED GIRLS WHEN THE RAINBOW IS ENUF",
+      description: "Using mise-en-scène for analysing the visual and spatial elements of theatrical production, including lighting, movement, spatial arrangements, and how actors interact with their environment."
     }
   ];
 
   return (
-    <section id="projects" className="min-h-screen py-20 px-4 relative overflow-hidden">
-      {/* Background petals will appear here automatically from App.js */}
-      <div className="max-w-7xl mx-auto relative z-10">
-        <h3 className="text-rose-300 uppercase tracking-widest text-sm text-center mb-2">MY WORK</h3>
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-rose-900 mb-16">Projects.</h2>
+    <section id="projects" className="min-h-screen py-20 px-4 relative">
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Heading */}
+        <h3 className="text-rose-400 uppercase tracking-[0.2em] text-sm font-light text-center mb-3">
+          MY WORK
+        </h3>
+        <h2 className="text-5xl sm:text-6xl font-light tracking-wide text-center text-rose-900 mb-12">
+          Lead Researcher & Author
+        </h2>
+        <div className="w-16 h-px bg-rose-300 mx-auto mb-16"></div>
 
-        {projects.map((project, index) => (
-          <div 
-            key={project.id} 
-            className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-10 mb-20 bg-white bg-opacity-70 backdrop-blur-sm rounded-xl p-6 shadow-lg`}
-          >
-            {/* Project Image */}
-            <div className="lg:w-1/2 hover:scale-105 transition-transform duration-300">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="rounded-xl shadow-2xl w-full h-auto border-4 border-rose-200"
-              />
-            </div>
-
-            {/* Project Details */}
-            <div className="lg:w-1/2 text-rose-900">
-              <h3 className="text-3xl font-bold text-center lg:text-left mb-6">{project.title}</h3>
-              
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
-                {project.tech.map((tech, i) => (
-                  <span key={i} className="bg-rose-500 text-white px-3 py-1 rounded-full text-sm">
-                    {tech}
-                  </span>
-                ))}
+        {/* Single Big Box */}
+        <div className="bg-white/30 backdrop-blur-md rounded-2xl shadow-xl border border-rose-200 p-8 md:p-12">
+          <div className="space-y-8">
+            {projects.map((project, idx) => (
+              <div 
+                key={project.id} 
+                className={`pb-6 ${idx !== projects.length - 1 ? 'border-b border-rose-200' : ''}`}
+              >
+                {/* Title with bullet */}
+                <div className="flex items-start gap-3 mb-2">
+                  <span className="text-rose-500 text-2xl mt-1">•</span>
+                  <h3 className="text-xl md:text-2xl font-semibold text-rose-900">
+                    {project.title}
+                  </h3>
+                </div>
+                
+                {/* Description */}
+                <div className="ml-6">
+                  <p className="text-rose-800 leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
               </div>
-
-              {/* Description */}
-              <ul className="space-y-3 text-lg">
-                {project.description.map((item, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="mr-2 text-rose-500">✔️</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

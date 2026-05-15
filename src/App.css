@@ -68,7 +68,6 @@
   }
 }
 
-/* Existing styles */
 .App {
   text-align: center;
 }
@@ -100,130 +99,113 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Content sections */
 #name, #about, #education, #experience, #skills, #contact {
   background-color: transparent;
 }
 
-/* Text colors */
-.text-rose-900 {
-  color: #5a2a40;
-}
-
-.text-rose-800 {
-  color: #7a3d5a;
-}
-
-.text-rose-700 {
-  color: #9d6381;
-}
-
-.text-rose-600 {
-  color: #c08ba1;
-}
-
-.text-rose-500 {
-  color: #d4a5b5;
-}
-
-/* Background colors */
-.bg-rose-50 {
-  background-color: #fff1f2;
-}
-
-.bg-rose-100 {
-  background-color: #ffe4e6;
-}
-
-.bg-rose-200 {
-  background-color: #fecdd3;
-}
-
-.bg-rose-300 {
-  background-color: #fda4af;
-}
-
-.bg-rose-400 {
-  background-color: #fb7185;
-}
-
-.bg-rose-500 {
-  background-color: #f43f5e;
-}
-
-.bg-rose-600 {
-  background-color: #e11d48;
-}
-
-.bg-rose-700 {
-  background-color: #be123c;
-}
-
-.bg-rose-800 {
-  background-color: #9f1239;
-}
-
-.bg-rose-900 {
-  background-color: #881337;
-}
-
-/* Existing styles */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .cherry-blossom-tree {
-    width: 150px;
-    height: 300px;
-    opacity: 0.7;
-  }
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+/* ── Experience section ── */
+
+.exp-image-popup {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s;
+  pointer-events: none;
+  width: 72vw;
+  max-width: 288px;
+  z-index: 30;
+}
+
+.group:hover .exp-image-popup {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.exp-image-popup.left-side  { right: 0; }
+.exp-image-popup.right-side { left: 0; }
+
+/* Static image — hidden on desktop, visible on mobile */
+.exp-image-static {
+  display: none;
+  margin-top: 0.75rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid rgba(253,164,175,0.3);
+  width: 100%;
+  max-width: 260px;
+}
+
+.exp-image-static img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+  /* Single-column timeline */
+  #experience .relative.max-w-6xl .group {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding-left: 3.5rem;
+  }
+
+  /* All content panes full width, left-aligned */
+  #experience .w-1\/2 {
+    width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Hide the blank spacer half */
+  #experience .flex.justify-end  > .w-1\/2:first-child,
+  #experience .flex.justify-start > .w-1\/2:last-child {
+    display: none !important;
+  }
+
+  /* Pin timeline line & dots to the left */
+  #experience .absolute.left-1\/2 {
+    left: 0.75rem !important;
+    transform: none !important;
+  }
+
+  /* Hide horizontal connector lines */
+  #experience .absolute.right-0.top-6,
+  #experience .absolute.left-0.top-6 {
+    display: none !important;
+  }
+
+  /* Kill the hover-fade effect */
+  #experience .group:hover .group-hover\:opacity-0 {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Hide desktop popup, show static image */
+  .exp-image-popup  { display: none !important; }
+  .exp-image-static { display: block !important; }
+
+   /* Move vertical line */
+  #experience .timeline-line {
+    left: 1rem !important;
+    transform: none !important;
+  }
+
+  /* Keep circles centered on line */
+  #experience .timeline-circle {
+    left: 1rem !important;
+    transform: translateX(-50%) !important;
+  }
 }

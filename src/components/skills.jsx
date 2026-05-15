@@ -17,69 +17,24 @@ import {
 
 const skills = [
   {
-    domain: "Programming Languages",
+    domain: "Cognitive & Analytical Skills",
     icon: <FaCode className="text-xl text-rose-600" />,
-    skills: ["Python", "HTML/CSS", "JavaScript", "C++", "Java", "C# (Unity)"],
+    skills: ["Creative & Critical Thinking", "Organizational & Problem-solving", "Attention to Detail", "Active Listening & Decision-Making"],
   },
   {
-    domain: "Data Science / AI",
+    domain: "Interpersonal & Communication",
     icon: <FaBrain className="text-xl text-rose-500" />,
-    skills: ["NLP", "ML"],
+    skills: ["Excellent Communication", "Teamwork and Collaboration"],
   },
   {
-    domain: "Data Engineering",
+    domain: "Personal Effectiveness & Work Ethic",
     icon: <FaCloud className="text-xl text-rose-400" />,
     skills: [
-      "Python",
-      "SQL",
-      "Data Mining",
-      "AWS S3",
-      "Data Modeling"
+      "Dependable and Responsible",
+      "Flexible and Adaptable",
+      "Multitasking Abilities"
     ],
-  },
-  {
-    domain: "Frontend Development",
-    icon: <SiReact className="text-xl text-rose-300" />,
-    skills: [
-      "Tailwind",
-      "CSS",
-      "Bootstrap",
-      "Responsive Design"
-    ],
-  },
-  {
-    domain: "Backend Development",
-    icon: <FaServer className="text-xl text-rose-200" />,
-    skills: ["Node.js", "Express"],
-  },
-  {
-    domain: "DBMS",
-    icon: <FaDatabase className="text-xl text-rose-100" />,
-    skills: ["MySQL", "MongoDB"],
-  },
-  {
-    domain: "DSA & Problem Solving",
-    icon: <FaRobot className="text-xl text-rose-50" />,
-    skills: ["Algorithm Analysis", "Problem Solving"],
-  },
-  {
-    domain: "Extra Curricular",
-    icon: <FaChalkboardTeacher className="text-xl text-rose-300" />,
-    skills: [
-      "Sports",
-      "Show Hosting",
-      "Event Management",
-      "Debate",
-      "Script Writing",
-      "Content Creation",
-      "Video Editing",
-    ],
-  },
-  {
-    domain: "Soft Skills",
-    icon: <FaUsers className="text-xl text-rose-400" />,
-    skills: ["Good Listening", "Communication", "Team Management"],
-  },
+  }
 ];
 
 export default function Skills() {
