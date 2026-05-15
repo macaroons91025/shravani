@@ -12,7 +12,7 @@ import {
 
 } from "react-icons/fa";
 import {
-  SiReact,
+ 
 } from "react-icons/si";
 
 const skills = [
